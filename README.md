@@ -192,10 +192,15 @@ digunakan untuk mengontrol random number generator yang digunakan, set random_st
 
 # Evaluasi 
 Metrik yang akan digunakan pada prediksi ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. Rumusnya adalah sebagai berikut:
+
 ![image](https://user-images.githubusercontent.com/92345291/196162775-2b298fbc-ec90-4e24-8953-c1c66429b27e.png)
+
 Keterangan :
+
 N = jumlah dataset
+
 yi = nilai sebenarnya
+
 y_pred = nilai prediksi
 
 Namun, sebelum menghitung nilai MSE dalam model, perlu melakukan proses scaling fitur numerik pada data uji. Selanjutnya, evaluasi ketiga model dengan metrik MSE. Saat menghitung nilai Mean Squared Error pada data train dan test, membaginya dengan nilai 1e3. Hal ini bertujuan agar nilai mse berada dalam skala yang tidak terlalu besar. 
