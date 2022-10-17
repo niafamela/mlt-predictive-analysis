@@ -205,14 +205,17 @@ y_pred = nilai prediksi
 
 Namun, sebelum menghitung nilai MSE dalam model, perlu melakukan proses scaling fitur numerik pada data uji. Selanjutnya, evaluasi ketiga model dengan metrik MSE. Saat menghitung nilai Mean Squared Error pada data train dan test, membaginya dengan nilai 1e3. Hal ini bertujuan agar nilai mse berada dalam skala yang tidak terlalu besar. 
 - Hasil evaluasi pada data latih dan data test adalah sebagai berikut
+
 ![11](https://user-images.githubusercontent.com/92345291/196163521-77852db3-0055-4e21-b0b1-7fd506197ffa.png)
 
 - Hasil plot metrik dengan bar chart
+
 ![12](https://user-images.githubusercontent.com/92345291/196164014-af7a2d11-c760-439a-ab53-1eea7c33fbfa.png)
 
 Dari gambar di atas, terlihat bahwa, model Random Forest (RF) memberikan nilai eror yang paling kecil dibandingkan dengan model yang lainnya.
 
 - Untuk mengujinya, buat prediksi menggunakan beberapa harga dari data test, dan hasilnya sebagai berikut:
+
 ![13](https://user-images.githubusercontent.com/92345291/196165116-1948b6c4-f852-4553-b17f-edab47080529.png)
 
 Terlihat bahwa prediksi dengan Random Forest (RF) memberikan hasil yang paling mendekati. Selain itu, untuk menguji hasil prediksi pada data lain, dapat dilakukan dengan cara mengubah indeks pada X_test.
