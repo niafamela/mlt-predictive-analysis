@@ -108,14 +108,17 @@ Multivariate Analysis menunjukkan hubungan antara dua atau lebih variabel sehing
 #### Categorical Features
 - Fitur Area Type
 ![3](https://user-images.githubusercontent.com/92345291/196147424-758796b7-351b-4110-8718-79093cc7a8a9.png)
+
 Fitur Area Type memiliki pengaruh yang kecil terhadap rata-rata harga sewa (Rent)
 
 - Fitur City
 ![4](https://user-images.githubusercontent.com/92345291/196147810-a58ce0ed-159e-4a17-b074-900c96393434.png)
+
 Fitur City memiliki pengaruh cukup besar terhadap rata-rata harga sewa (Rent). Harga sewa (Rent) terbesar terletak di Mumbai. Hal tersebut membuktikan bahwa kota Mumbai memiliki harga termahal untuk ditinggali
 
 - Fitur Furnishing Status
 ![5](https://user-images.githubusercontent.com/92345291/196148715-58a545d8-5ffd-41a8-823c-f46f7d47aab3.png)
+
 Fitur Furnishing Status memiliki pengaruh cukup besar terhadap rata-rata harga sewa (Rent). Hal tersebut merupakan hal yang biasa dilakukan apabila membeli rumah atau aparatemen yang sudah memiliki furniture atau perabotan didalamnya yang mengakibatkan harga sewa (Rent) juga bertambah dibandingkan dengan harga sewa (Rent) yang tidak emmiliki furniture sama sekali didalamnya. 
 
 - Fitur Tenant Preffered
@@ -125,10 +128,12 @@ Fitur Tenant Preferred memiliki pengaruh yang cukup terhadap rata-rata harga sew
 ### Numerical Features
 Untuk mengamati hubungan antara fitur numerik, kita akan menggunakan fungsi pairplot()
 ![7](https://user-images.githubusercontent.com/92345291/196151518-fd5fceaf-081f-4393-a906-149dc8666113.png)
+
 Pada pola sebaran data grafik pairplot diatas, terlihat bahwa ‘BHK’, ‘Size’, dan ‘Bathroom’ memiliki korelasi yang tinggi dengan fitur "Rent"
 
 Untuk mengevaluasi skor korelasinya, gunakan fungsi corr().
 ![8](https://user-images.githubusercontent.com/92345291/196152492-6a5ecea5-7e90-4861-bb87-28602372ffa5.png)
+
 Jika kita amati, fitur ‘BHK’, ‘Size’, dan ‘Bathroom’ memiliki skor korelasi yang besar (di atas 0.6) dengan fitur target ‘Rent’. Artinya, fitur 'Rent' berkorelasi tinggi dengan ketiga fitur tersebut.
 
 # Data Preparation
@@ -145,6 +150,7 @@ Sehingga dihasilkan:
 
 Untuk mengecek nilai mean dan standar deviasi pada setelah proses standarisasi yaitu:
 ![10](https://user-images.githubusercontent.com/92345291/196155890-d9acfbec-3980-4049-96af-cd36dba6b069.png)
+
 Sekarang nilai mean = 0 dan standar deviasi = 1.
 
 # Model
@@ -198,9 +204,11 @@ Namun, sebelum menghitung nilai MSE dalam model, perlu melakukan proses scaling 
 
 - Hasil plot metrik dengan bar chart
 ![12](https://user-images.githubusercontent.com/92345291/196164014-af7a2d11-c760-439a-ab53-1eea7c33fbfa.png)
+
 Dari gambar di atas, terlihat bahwa, model Random Forest (RF) memberikan nilai eror yang paling kecil dibandingkan dengan model yang lainnya.
 
 - Untuk mengujinya, buat prediksi menggunakan beberapa harga dari data test, dan hasilnya sebagai berikut:
 ![13](https://user-images.githubusercontent.com/92345291/196165116-1948b6c4-f852-4553-b17f-edab47080529.png)
+
 Terlihat bahwa prediksi dengan Random Forest (RF) memberikan hasil yang paling mendekati. Selain itu, untuk menguji hasil prediksi pada data lain, dapat dilakukan dengan cara mengubah indeks pada X_test.
 
